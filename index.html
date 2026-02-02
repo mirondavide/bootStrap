@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap 5 - Concetti Essenziali</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-light">
+    <!-- Navbar semplice -->
+    <nav class="navbar navbar-dark bg-primary mb-4 text-center">
+      <div class="container">
+        <span class="navbar-brand">Bootstrap 5 - Essenziali</span>
+      </div>
+    </nav>
+
+    <div class="container py-4">
+      <h1 class="text-center mb-5">Bootstrap 5 - Concetti Essenziali</h1>
+
+      <!-- ============================================
+             SEZIONE 0: COME INCLUDERE BOOTSTRAP
+             ============================================ -->
+      <section class="bg-white p-4 mb-4 rounded shadow-sm">
+        <h2 class="text-primary mb-4">0. Come Includere Bootstrap</h2>
+
+        <p>Ci sono <strong>due modi</strong> per includere Bootstrap nel tuo progetto:</p>
+
+        <!-- Metodo 1: Download -->
+        <h5 class="mt-4"><i class="bi bi-download me-2"></i>Metodo 1: Download</h5>
+        <p>Scarica i file di Bootstrap e includili localmente nel tuo progetto:</p>
+        <a href="https://github.com/twbs/bootstrap/releases/download/v5.3.8/bootstrap-5.3.8-dist.zip" class="btn btn-primary mb-3" download>
+          <i class="bi bi-download me-2"></i>Scarica Bootstrap 5.3.8
+        </a>
+        <div class="bg-light border rounded p-3 mt-2">
+          <pre><code>&lt;!-- Nel &lt;head&gt; - CSS di Bootstrap --&gt;
+&lt;link href="css/bootstrap.min.css" rel="stylesheet"&gt;
+
+&lt;!-- Prima di &lt;/body&gt; - JavaScript di Bootstrap --&gt;
+&lt;script src="js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;</code></pre>
+        </div>
+
+        <!-- Metodo 2: CDN -->
+        <h5 class="mt-4"><i class="bi bi-cloud me-2"></i>Metodo 2: CDN</h5>
+        <p>Usa i link CDN per includere Bootstrap direttamente da internet (non serve scaricare nulla):</p>
+        <div class="bg-light border rounded p-3 mt-2">
+          <pre><code>&lt;!-- Nel &lt;head&gt; - CSS di Bootstrap --&gt;
+&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+
+&lt;!-- Prima di &lt;/body&gt; - JavaScript di Bootstrap --&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;</code></pre>
+        </div>
+      </section>
+
+      <!-- ============================================
+             SEZIONE 1: CONTENITORI
+             ============================================ -->
+      <section class="bg-white p-4 mb-4 rounded shadow-sm">
+        <h2 class="text-primary mb-4">1. Contenitori</h2>
+
+        <p>
+          <strong>I Contenitori</strong> sono l'elemento base del layout.
+          Contengono e centrano il contenuto.
+        </p>
+        <ul>
+          <li>
+            <code>.container</code> - Larghezza fissa (cambia ad ogni
+            breakpoint)
+          </li>
+          <li><code>.container-fluid</code> - Larghezza piena (sempre 100%)</li>
+        </ul>
+
+        <h5 class="mt-4">.container (Larghezza Fissa)</h5>
+        <div class="container bg-info text-white p-3 mb-3">
+          Questo e un .container - ha una larghezza massima che cambia in base
+          allo schermo.
+        </div>
+
+        <h5>.container-fluid (Larghezza Piena)</h5>
+        <div class="container-fluid bg-success text-white p-3 mb-3">
+          Questo e un .container-fluid - occupa sempre il 100% della larghezza.
+        </div>
+
+        <h5 class="mt-4">Tabella Contenitori</h5>
+        <p>
+          Vedi come cambiano le larghezze dei contenitori ad ogni breakpoint:
+        </p>
+        <div class="table-responsive">
+          <table class="table table-bordered text-center">
+            <thead class="table-dark">
+              <tr>
+                <th></th>
+                <th>Extra small<br /><small>&lt;576px</small></th>
+                <th>Small<br /><small>≥576px</small></th>
+                <th>Medium<br /><small>≥768px</small></th>
+                <th>Large<br /><small>≥992px</small></th>
+                <th>X-Large<br /><small>≥1200px</small></th>
+                <th>XX-Large<br /><small>≥1400px</small></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>.container</code></td>
+                <td>100%</td>
+                <td>540px</td>
+                <td>720px</td>
+                <td>960px</td>
+                <td>1140px</td>
+                <td>1320px</td>
+              </tr>
+              <tr>
+                <td><code>.container-sm</code></td>
+                <td>100%</td>
+                <td>540px</td>
+                <td>720px</td>
+                <td>960px</td>
+                <td>1140px</td>
+                <td>1320px</td>
+              </tr>
+              <tr>
+                <td><code>.container-md</code></td>
+                <td>100%</td>
+                <td>100%</td>
+                <td>720px</td>
+                <td>960px</td>
+                <td>1140px</td>
+                <td>1320px</td>
+              </tr>
+              <tr>
+                <td><code>.container-lg</code></td>
+                <td>100%</td>
+                <td>100%</td>
+                <td>100%</td>
+                <td>960px</td>
+                <td>1140px</td>
+                <td>1320px</td>
+              </tr>
+              <tr>
+                <td><code>.container-xl</code></td>
+                <td>100%</td>
+                <td>100%</td>
+                <td>100%</td>
+                <td>100%</td>
+                <td>1140px</td>
+                <td>1320px</td>
+              </tr>
+              <tr>
+                <td><code>.container-xxl</code></td>
+                <td>100%</td>
+                <td>100%</td>
+                <td>100%</td>
+                <td>100%</td>
+                <td>100%</td>
+                <td>1320px</td>
+              </tr>
+              <tr>
+                <td><code>.container-fluid</code></td>
+                <td>100%</td>
+                <td>100%</td>
+                <td>100%</td>
+                <td>100%</td>
+                <td>100%</td>
+                <td>100%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="bg-light border rounded p-3 mt-3">
+          <pre><code>&lt;div class="container"&gt;Contenitore a larghezza fissa&lt;/div&gt;
+&lt;div class="container-fluid"&gt;Contenitore a larghezza piena&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+
+      <!-- ============================================
+             SEZIONE 2: SISTEMA A GRIGLIA
+             ============================================ -->
+      <section class="bg-white p-4 mb-4 rounded shadow-sm">
+        <h2 class="text-primary mb-4">2. Sistema a Griglia (Grid)</h2>
+
+        <p>
+          <strong>La Griglia</strong> e il cuore di Bootstrap. Usa un sistema a
+          <strong>12 colonne</strong>.
+        </p>
+        <ul>
+          <li><code>.row</code> - Crea una riga</li>
+          <li>
+            <code>.col</code> - Colonne che si dividono lo spazio
+            automaticamente
+          </li>
+          <li>
+            <code>.col-{numero}</code> - Colonna con larghezza specifica (1-12)
+          </li>
+          <li><code>.col-{breakpoint}-{numero}</code> - Colonna responsive</li>
+        </ul>
+
+        <div class="alert alert-info">
+          <strong>Breakpoints:</strong> sm (≥576px), md (≥768px), lg (≥992px),
+          xl (≥1200px)
+        </div>
+
+        <!-- Colonne uguali -->
+        <h5 class="mt-4">Colonne Uguali</h5>
+        <div class="row mb-3">
+          <div class="col">
+            <div class="bg-primary text-white p-3 text-center border mb-2">
+              .col
+            </div>
+          </div>
+          <div class="col">
+            <div class="bg-primary text-white p-3 text-center border mb-2">
+              .col
+            </div>
+          </div>
+          <div class="col">
+            <div class="bg-primary text-white p-3 text-center border mb-2">
+              .col
+            </div>
+          </div>
+        </div>
+
+        <!-- Colonne specifiche -->
+        <h5>Larghezze Specifiche (totale = 12)</h5>
+        <div class="row mb-3">
+          <div class="col-4">
+            <div class="bg-primary text-white p-3 text-center border mb-2">
+              .col-4
+            </div>
+          </div>
+          <div class="col-8">
+            <div class="bg-primary text-white p-3 text-center border mb-2">
+              .col-8
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-6">
+            <div class="bg-primary text-white p-3 text-center border mb-2">
+              .col-6
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="bg-primary text-white p-3 text-center border mb-2">
+              .col-6
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-3">
+            <div class="bg-primary text-white p-3 text-center border mb-2">
+              .col-3
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="bg-primary text-white p-3 text-center border mb-2">
+              .col-3
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="bg-primary text-white p-3 text-center border mb-2">
+              .col-3
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="bg-primary text-white p-3 text-center border mb-2">
+              .col-3
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-light border rounded p-3 mt-3">
+          <pre><code>&lt;!-- Colonne uguali --&gt;
+&lt;div class="row"&gt;
+    &lt;div class="col"&gt;Colonna 1&lt;/div&gt;
+    &lt;div class="col"&gt;Colonna 2&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Colonne con larghezza specifica --&gt;
+&lt;div class="row"&gt;
+    &lt;div class="col-4"&gt;4 colonne&lt;/div&gt;
+    &lt;div class="col-8"&gt;8 colonne&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+
+      <!-- ============================================
+             SEZIONE 3: SPAZIATURA
+             ============================================ -->
+      <section class="bg-white p-4 mb-4 rounded shadow-sm">
+        <h2 class="text-primary mb-4">3. Spaziatura (Margin e Padding)</h2>
+
+        <p>
+          <strong>Formato:</strong> <code>{proprieta}{lato}-{dimensione}</code>
+        </p>
+
+        <div class="row">
+          <div class="col-md-4">
+            <h6>Proprieta</h6>
+            <ul>
+              <li><code>m</code> = margin</li>
+              <li><code>p</code> = padding</li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h6>Lato</h6>
+            <ul>
+              <li><code>t</code> = top (alto)</li>
+              <li><code>b</code> = bottom (basso)</li>
+              <li><code>s</code> = start (sinistra)</li>
+              <li><code>e</code> = end (destra)</li>
+              <li><code>x</code> = sinistra + destra</li>
+              <li><code>y</code> = alto + basso</li>
+              <li>(vuoto) = tutti i lati</li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h6>Dimensione</h6>
+            <ul>
+              <li><code>0</code> = 0</li>
+              <li><code>1</code> = 0.25rem</li>
+              <li><code>2</code> = 0.5rem</li>
+              <li><code>3</code> = 1rem</li>
+              <li><code>4</code> = 1.5rem</li>
+              <li><code>5</code> = 3rem</li>
+            </ul>
+          </div>
+        </div>
+
+        <h5 class="mt-4">Esempi</h5>
+        <div class="bg-secondary p-2 mb-3">
+          <div class="m-3 p-3 bg-primary text-white">
+            m-3 p-3 (margin e padding su tutti i lati)
+          </div>
+        </div>
+        <div class="bg-secondary p-2 mb-3">
+          <div class="mt-2 mb-4 bg-success text-white p-2">
+            mt-2 mb-4 (margin-top 2, margin-bottom 4)
+          </div>
+        </div>
+        <div class="bg-secondary p-2">
+          <div class="px-5 py-2 bg-warning">
+            px-5 py-2 (padding asse x 5, asse y 2)
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================
+             SEZIONE 4: COLORI
+             ============================================ -->
+      <section class="bg-white p-4 mb-4 rounded shadow-sm">
+        <h2 class="text-primary mb-4">4. Colori</h2>
+
+        <p>
+          <strong>Testo:</strong> <code>text-{colore}</code> |
+          <strong>Sfondo:</strong> <code>bg-{colore}</code>
+        </p>
+
+        <div class="row">
+          <div class="col-md-6">
+            <h5>Colori Testo</h5>
+            <p class="text-primary">text-primary</p>
+            <p class="text-secondary">text-secondary</p>
+            <p class="text-success">text-success</p>
+            <p class="text-danger">text-danger</p>
+            <p class="text-warning bg-dark">text-warning</p>
+            <p class="text-info bg-dark">text-info</p>
+          </div>
+          <div class="col-md-6">
+            <h5>Colori Sfondo</h5>
+            <p class="bg-primary text-white p-2">bg-primary</p>
+            <p class="bg-secondary text-white p-2">bg-secondary</p>
+            <p class="bg-success text-white p-2">bg-success</p>
+            <p class="bg-danger text-white p-2">bg-danger</p>
+            <p class="bg-warning p-2">bg-warning</p>
+            <p class="bg-info p-2">bg-info</p>
+          </div>
+        </div>
+
+        <div class="bg-light border rounded p-3 mt-3">
+          <pre><code>&lt;p class="text-primary"&gt;Testo blu primario&lt;/p&gt;
+&lt;p class="text-danger"&gt;Testo rosso pericolo&lt;/p&gt;
+&lt;div class="bg-success text-white"&gt;Sfondo verde successo&lt;/div&gt;
+&lt;div class="bg-warning"&gt;Sfondo giallo avviso&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+
+      <!-- ============================================
+             SEZIONE 5: PULSANTI
+             ============================================ -->
+      <section class="bg-white p-4 mb-4 rounded shadow-sm">
+        <h2 class="text-primary mb-4">5. Pulsanti</h2>
+
+        <p><strong>Classe base:</strong> <code>.btn .btn-{colore}</code></p>
+
+        <h5>Pulsanti Standard</h5>
+        <div class="mb-3">
+          <button class="btn btn-primary">Primary</button>
+          <button class="btn btn-secondary">Secondary</button>
+          <button class="btn btn-success">Success</button>
+          <button class="btn btn-danger">Danger</button>
+          <button class="btn btn-warning">Warning</button>
+          <button class="btn btn-info">Info</button>
+        </div>
+
+        <h5>Pulsanti Outline</h5>
+        <div class="mb-3">
+          <button class="btn btn-outline-primary">Primary</button>
+          <button class="btn btn-outline-secondary">Secondary</button>
+          <button class="btn btn-outline-success">Success</button>
+          <button class="btn btn-outline-danger">Danger</button>
+        </div>
+
+        <h5>Dimensioni</h5>
+        <div class="mb-3">
+          <button class="btn btn-primary btn-lg">Grande (btn-lg)</button>
+          <button class="btn btn-primary">Normale</button>
+          <button class="btn btn-primary btn-sm">Piccolo (btn-sm)</button>
+        </div>
+
+        <div class="bg-light border rounded p-3 mt-3">
+          <pre><code>&lt;button class="btn btn-primary"&gt;Primario&lt;/button&gt;
+&lt;button class="btn btn-success"&gt;Successo&lt;/button&gt;
+&lt;button class="btn btn-outline-danger"&gt;Outline Pericolo&lt;/button&gt;
+&lt;button class="btn btn-primary btn-lg"&gt;Pulsante Grande&lt;/button&gt;
+&lt;button class="btn btn-primary btn-sm"&gt;Pulsante Piccolo&lt;/button&gt;</code></pre>
+        </div>
+      </section>
+
+      <!-- ============================================
+             SEZIONE 6: CAROUSEL
+             ============================================ -->
+      <section class="bg-white p-4 mb-4 rounded shadow-sm">
+        <h2 class="text-primary mb-4">6. Carousel</h2>
+
+        <p>
+          <strong>Il Carousel</strong> e uno slideshow per scorrere tra immagini
+          o contenuti.
+        </p>
+        <ul>
+          <li><code>.carousel</code> - Contenitore principale</li>
+          <li><code>.carousel-inner</code> - Contiene le slide</li>
+          <li><code>.carousel-item</code> - Ogni singola slide</li>
+          <li><code>data-bs-ride="carousel"</code> - Attiva l'autoplay</li>
+        </ul>
+
+        <div id="demoCarousel" class="carousel slide w-25 mx-auto" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="SwipeFlow.png" class="d-block w-100" alt="Slide 1" />
+            </div>
+            <div class="carousel-item">
+              <img src="SwipeFlow.png" class="d-block w-100" alt="Slide 2" />
+            </div>
+            <div class="carousel-item">
+              <img src="SwipeFlow.png" class="d-block w-100" alt="Slide 3" />
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#demoCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#demoCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+
+        <div class="bg-light border rounded p-3 mt-3">
+          <pre><code>&lt;div id="myCarousel" class="carousel slide" data-bs-ride="carousel"&gt;
+    &lt;div class="carousel-inner"&gt;
+        &lt;div class="carousel-item active"&gt;
+            &lt;img src="img1.jpg" class="d-block w-100" alt="..."&gt;
+        &lt;/div&gt;
+        &lt;div class="carousel-item"&gt;
+            &lt;img src="img2.jpg" class="d-block w-100" alt="..."&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;button class="carousel-control-prev" data-bs-target="#myCarousel" data-bs-slide="prev"&gt;
+        &lt;span class="carousel-control-prev-icon"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;button class="carousel-control-next" data-bs-target="#myCarousel" data-bs-slide="next"&gt;
+        &lt;span class="carousel-control-next-icon"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+      <p class="mb-0">Bootstrap 5 - Concetti Essenziali per la Classe</p>
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
