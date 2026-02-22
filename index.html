@@ -78,6 +78,7 @@
       <!-- ============================================
              SEZIONE 1: COLORI
              ============================================ -->
+
       <section class="bg-white p-4 mb-4 rounded shadow-sm">
         <h2 class="text-primary mb-4">1. Colori</h2>
 
@@ -224,32 +225,22 @@
         <h2 class="text-primary mb-4">4. Contenitori</h2>
 
         <p>
-          <strong>I Contenitori</strong> sono l'elemento base del layout.
-          Contengono e centrano il contenuto.
+          <strong>I Contenitori</strong> contengono e centrano il contenuto della pagina.
         </p>
         <ul>
-          <li>
-            <code>.container</code> - Larghezza fissa (cambia ad ogni
-            breakpoint)
-          </li>
+          <li><code>.container</code> - Larghezza fissa (cambia in base allo schermo)</li>
           <li><code>.container-fluid</code> - Larghezza piena (sempre 100%)</li>
         </ul>
 
-        <h5 class="mt-4">.container (Larghezza Fissa)</h5>
+        <h5 class="mt-4">Esempi</h5>
         <div class="container bg-info text-white p-3 mb-3">
-          Questo e un .container - ha una larghezza massima che cambia in base
-          allo schermo.
+          .container - larghezza fissa
         </div>
-
-        <h5>.container-fluid (Larghezza Piena)</h5>
         <div class="container-fluid bg-success text-white p-3 mb-3">
-          Questo e un .container-fluid - occupa sempre il 100% della larghezza.
+          .container-fluid - larghezza piena (100%)
         </div>
 
         <h5 class="mt-4">Tabella Contenitori</h5>
-        <p>
-          Vedi come cambiano le larghezze dei contenitori ad ogni breakpoint:
-        </p>
         <div class="table-responsive">
           <table class="table table-bordered text-center">
             <thead class="table-dark">
@@ -332,7 +323,7 @@
         </div>
 
         <div class="bg-light border rounded p-3 mt-3">
-          <pre><code>&lt;div class="container bg-primary"&gt;Contenitore a larghezza fissa&lt;/div&gt;
+          <pre><code>&lt;div class="container bg-danger"&gt;Contenitore a larghezza fissa&lt;/div&gt;
 &lt;div class="container-fluid bg-primary"&gt;Contenitore a larghezza piena&lt;/div&gt;</code></pre>
         </div>
       </section>
@@ -518,6 +509,7 @@
       </section>
     </div>
 
+    
     <!-- Footer -->
     <footer class="bg-dark text-white text-center py-3">
       <p class="mb-0">Bootstrap 5 - Concetti Essenziali per la Classe</p>
