@@ -76,10 +76,152 @@
       </section>
 
       <!-- ============================================
-             SEZIONE 1: CONTENITORI
+             SEZIONE 1: COLORI
              ============================================ -->
       <section class="bg-white p-4 mb-4 rounded shadow-sm">
-        <h2 class="text-primary mb-4">1. Contenitori</h2>
+        <h2 class="text-primary mb-4">1. Colori</h2>
+
+        <p>
+          <strong>Testo:</strong> <code>text-{colore}</code> |
+          <strong>Sfondo:</strong> <code>bg-{colore}</code>
+        </p>
+
+        <div class="row">
+          <div class="col-md-6">
+            <h5>Colori Testo</h5>
+            <p class="text-primary">text-primary</p>
+            <p class="text-secondary">text-secondary</p>
+            <p class="text-success">text-success</p>
+            <p class="text-danger">text-danger</p>
+            <p class="text-warning bg-dark">text-warning</p>
+            <p class="text-info bg-dark">text-info</p>
+          </div>
+          <div class="col-md-6">
+            <h5>Colori Sfondo</h5>
+            <p class="bg-primary text-white p-2">bg-primary</p>
+            <p class="bg-secondary text-white p-2">bg-secondary</p>
+            <p class="bg-success text-white p-2">bg-success</p>
+            <p class="bg-danger text-white p-2">bg-danger</p>
+            <p class="bg-warning p-2">bg-warning</p>
+            <p class="bg-info p-2">bg-info</p>
+          </div>
+        </div>
+
+        <div class="bg-light border rounded p-3 mt-3">
+          <pre><code>&lt;p class="text-primary"&gt;Testo blu primario&lt;/p&gt;
+&lt;p class="text-danger"&gt;Testo rosso pericolo&lt;/p&gt;
+&lt;div class="bg-success text-white"&gt;Sfondo verde successo&lt;/div&gt;
+&lt;div class="bg-warning"&gt;Sfondo giallo avviso&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+
+      <!-- ============================================
+             SEZIONE 2: PULSANTI
+             ============================================ -->
+      <section class="bg-white p-4 mb-4 rounded shadow-sm">
+        <h2 class="text-primary mb-4">2. Pulsanti</h2>
+
+        <p><strong>Classe base:</strong> <code>.btn .btn-{colore}</code></p>
+
+        <h5>Pulsanti Standard</h5>
+        <div class="mb-3">
+          <button class="btn btn-primary">Primary</button>
+          <button class="btn btn-secondary">Secondary</button>
+          <button class="btn btn-success">Success</button>
+          <button class="btn btn-danger">Danger</button>
+          <button class="btn btn-warning">Warning</button>
+          <button class="btn btn-info">Info</button>
+        </div>
+
+        <h5>Pulsanti Outline</h5>
+        <div class="mb-3">
+          <button class="btn btn-outline-primary">Primary</button>
+          <button class="btn btn-outline-secondary">Secondary</button>
+          <button class="btn btn-outline-success">Success</button>
+          <button class="btn btn-outline-danger">Danger</button>
+        </div>
+
+        <h5>Dimensioni</h5>
+        <div class="mb-3">
+          <button class="btn btn-primary btn-lg">Grande (btn-lg)</button>
+          <button class="btn btn-primary">Normale</button>
+          <button class="btn btn-primary btn-sm">Piccolo (btn-sm)</button>
+        </div>
+
+        <div class="bg-light border rounded p-3 mt-3">
+          <pre><code>&lt;button class="btn btn-primary"&gt;Primario&lt;/button&gt;
+&lt;button class="btn btn-success"&gt;Successo&lt;/button&gt;
+&lt;button class="btn btn-outline-danger"&gt;Outline Pericolo&lt;/button&gt;
+&lt;button class="btn btn-primary btn-lg"&gt;Pulsante Grande&lt;/button&gt;
+&lt;button class="btn btn-primary btn-sm"&gt;Pulsante Piccolo&lt;/button&gt;</code></pre>
+        </div>
+      </section>
+
+      <!-- ============================================
+             SEZIONE 3: SPAZIATURA
+             ============================================ -->
+      <section class="bg-white p-4 mb-4 rounded shadow-sm">
+        <h2 class="text-primary mb-4">3. Spaziatura (Margin e Padding)</h2>
+
+        <p>
+          <strong>Formato:</strong> <code>{proprieta}{lato}-{dimensione}</code>
+        </p>
+        <div class="row">
+          <div class="col-md-4">
+            <h6>Proprieta</h6>
+            <ul>
+              <li><code>m</code> = margin</li>
+              <li><code>p</code> = padding</li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h6>Lato</h6>
+            <ul>
+              <li><code>t</code> = top (alto)</li>
+              <li><code>b</code> = bottom (basso)</li>
+              <li><code>s</code> = start (sinistra)</li>
+              <li><code>e</code> = end (destra)</li>
+              <li><code>x</code> = sinistra + destra</li>
+              <li><code>y</code> = alto + basso</li>
+              <li>(vuoto) = tutti i lati</li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h6>Dimensione</h6>
+            <ul>
+              <li><code>0</code> = 0</li>
+              <li><code>1</code> = 0.25rem</li>
+              <li><code>2</code> = 0.5rem</li>
+              <li><code>3</code> = 1rem</li>
+              <li><code>4</code> = 1.5rem</li>
+              <li><code>5</code> = 3rem</li>
+            </ul>
+          </div>
+        </div>
+
+        <h5 class="mt-4">Esempi</h5>
+        <div class="bg-secondary p-2 mb-3">
+          <div class="m-3 p-3 bg-primary text-white">
+            m-3 p-3 (margin e padding su tutti i lati)
+          </div>
+        </div>
+        <div class="bg-secondary p-2 mb-3">
+          <div class="mt-2 mb-4 bg-success text-white p-2">
+            mt-2 mb-4 (margin-top 2, margin-bottom 4)
+          </div>
+        </div>
+        <div class="bg-secondary p-2">
+          <div class="px-5 py-2 bg-warning">
+            px-5 py-2 (padding asse x 5, asse y 2)
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================
+             SEZIONE 4: CONTENITORI
+             ============================================ -->
+      <section class="bg-white p-4 mb-4 rounded shadow-sm">
+        <h2 class="text-primary mb-4">4. Contenitori</h2>
 
         <p>
           <strong>I Contenitori</strong> sono l'elemento base del layout.
@@ -196,10 +338,12 @@
       </section>
 
       <!-- ============================================
-             SEZIONE 2: SISTEMA A GRIGLIA
+             SEZIONE 5: SISTEMA A GRIGLIA
              ============================================ -->
 
       <section class="bg-white p-4 mb-4 rounded shadow-sm">
+        <h2 class="text-primary mb-4">5. Sistema a Griglia</h2>
+
         <p>
           <strong>La Griglia</strong> e il cuore di Bootstrap. Usa un sistema a
           <strong>12 colonne</strong>.
@@ -300,148 +444,6 @@
       </section>
 
       <!-- ============================================
-             SEZIONE 3: SPAZIATURA
-             ============================================ -->
-      <section class="bg-white p-4 mb-4 rounded shadow-sm">
-        <h2 class="text-primary mb-4">3. Spaziatura (Margin e Padding)</h2>
-
-        <p>
-          <strong>Formato:</strong> <code>{proprieta}{lato}-{dimensione}</code>
-        </p>
-        <div class="row">
-          <div class="col-md-4">
-            <h6>Proprieta</h6>
-            <ul>
-              <li><code>m</code> = margin</li>
-              <li><code>p</code> = padding</li>
-            </ul>
-          </div>
-          <div class="col-md-4">
-            <h6>Lato</h6>
-            <ul>
-              <li><code>t</code> = top (alto)</li>
-              <li><code>b</code> = bottom (basso)</li>
-              <li><code>s</code> = start (sinistra)</li>
-              <li><code>e</code> = end (destra)</li>
-              <li><code>x</code> = sinistra + destra</li>
-              <li><code>y</code> = alto + basso</li>
-              <li>(vuoto) = tutti i lati</li>
-            </ul>
-          </div>
-          <div class="col-md-4">
-            <h6>Dimensione</h6>
-            <ul>
-              <li><code>0</code> = 0</li>
-              <li><code>1</code> = 0.25rem</li>
-              <li><code>2</code> = 0.5rem</li>
-              <li><code>3</code> = 1rem</li>
-              <li><code>4</code> = 1.5rem</li>
-              <li><code>5</code> = 3rem</li>
-            </ul>
-          </div>
-        </div>
-
-        <h5 class="mt-4">Esempi</h5>
-        <div class="bg-secondary p-2 mb-3">
-          <div class="m-3 p-3 bg-primary text-white">
-            m-3 p-3 (margin e padding su tutti i lati)
-          </div>
-        </div>
-        <div class="bg-secondary p-2 mb-3">
-          <div class="mt-2 mb-4 bg-success text-white p-2">
-            mt-2 mb-4 (margin-top 2, margin-bottom 4)
-          </div>
-        </div>
-        <div class="bg-secondary p-2">
-          <div class="px-5 py-2 bg-warning">
-            px-5 py-2 (padding asse x 5, asse y 2)
-          </div>
-        </div>
-      </section>
-
-      <!-- ============================================
-             SEZIONE 4: COLORI
-             ============================================ -->
-      <section class="bg-white p-4 mb-4 rounded shadow-sm">
-        <h2 class="text-primary mb-4">4. Colori</h2>
-
-        <p>
-          <strong>Testo:</strong> <code>text-{colore}</code> |
-          <strong>Sfondo:</strong> <code>bg-{colore}</code>
-        </p>
-
-        <div class="row">
-          <div class="col-md-6">
-            <h5>Colori Testo</h5>
-            <p class="text-primary">text-primary</p>
-            <p class="text-secondary">text-secondary</p>
-            <p class="text-success">text-success</p>
-            <p class="text-danger">text-danger</p>
-            <p class="text-warning bg-dark">text-warning</p>
-            <p class="text-info bg-dark">text-info</p>
-          </div>
-          <div class="col-md-6">
-            <h5>Colori Sfondo</h5>
-            <p class="bg-primary text-white p-2">bg-primary</p>
-            <p class="bg-secondary text-white p-2">bg-secondary</p>
-            <p class="bg-success text-white p-2">bg-success</p>
-            <p class="bg-danger text-white p-2">bg-danger</p>
-            <p class="bg-warning p-2">bg-warning</p>
-            <p class="bg-info p-2">bg-info</p>
-          </div>
-        </div>
-
-        <div class="bg-light border rounded p-3 mt-3">
-          <pre><code>&lt;p class="text-primary"&gt;Testo blu primario&lt;/p&gt;
-&lt;p class="text-danger"&gt;Testo rosso pericolo&lt;/p&gt;
-&lt;div class="bg-success text-white"&gt;Sfondo verde successo&lt;/div&gt;
-&lt;div class="bg-warning"&gt;Sfondo giallo avviso&lt;/div&gt;</code></pre>
-        </div>
-      </section>
-
-      <!-- ============================================
-             SEZIONE 5: PULSANTI
-             ============================================ -->
-      <section class="bg-white p-4 mb-4 rounded shadow-sm">
-        <h2 class="text-primary mb-4">5. Pulsanti</h2>
-
-        <p><strong>Classe base:</strong> <code>.btn .btn-{colore}</code></p>
-
-        <h5>Pulsanti Standard</h5>
-        <div class="mb-3">
-          <button class="btn btn-primary">Primary</button>
-          <button class="btn btn-secondary">Secondary</button>
-          <button class="btn btn-success">Success</button>
-          <button class="btn btn-danger">Danger</button>
-          <button class="btn btn-warning">Warning</button>
-          <button class="btn btn-info">Info</button>
-        </div>
-
-        <h5>Pulsanti Outline</h5>
-        <div class="mb-3">
-          <button class="btn btn-outline-primary">Primary</button>
-          <button class="btn btn-outline-secondary">Secondary</button>
-          <button class="btn btn-outline-success">Success</button>
-          <button class="btn btn-outline-danger">Danger</button>
-        </div>
-
-        <h5>Dimensioni</h5>
-        <div class="mb-3">
-          <button class="btn btn-primary btn-lg">Grande (btn-lg)</button>
-          <button class="btn btn-primary">Normale</button>
-          <button class="btn btn-primary btn-sm">Piccolo (btn-sm)</button>
-        </div>
-
-        <div class="bg-light border rounded p-3 mt-3">
-          <pre><code>&lt;button class="btn btn-primary"&gt;Primario&lt;/button&gt;
-&lt;button class="btn btn-success"&gt;Successo&lt;/button&gt;
-&lt;button class="btn btn-outline-danger"&gt;Outline Pericolo&lt;/button&gt;
-&lt;button class="btn btn-primary btn-lg"&gt;Pulsante Grande&lt;/button&gt;
-&lt;button class="btn btn-primary btn-sm"&gt;Pulsante Piccolo&lt;/button&gt;</code></pre>
-        </div>
-      </section>
-
-      <!-- ============================================
              SEZIONE 6: CAROUSEL
              ============================================ -->
       <section class="bg-white p-4 mb-4 rounded shadow-sm">
@@ -460,18 +462,18 @@
 
         <div
           id="demoCarousel"
-          class="carousel slide w-25 mx-auto"
+          class="carousel slide w-50 mx-auto"
           data-bs-ride="carousel"
         >
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="SwipeFlow.png" class="d-block w-100" alt="Slide 1" />
+              <img src="img.jpg" class="d-block w-100" alt="Slide 1" />
             </div>
             <div class="carousel-item">
-              <img src="SwipeFlow.png" class="d-block w-100" alt="Slide 2" />
+              <img src="img.jpg" class="d-block w-100" alt="Slide 2" />
             </div>
             <div class="carousel-item">
-              <img src="SwipeFlow.png" class="d-block w-100" alt="Slide 3" />
+              <img src="img.jpg" class="d-block w-100" alt="Slide 3" />
             </div>
           </div>
           <button
@@ -496,13 +498,13 @@
           <pre><code>&lt;div id="demoCarousel" class="carousel slide w-25 mx-auto" data-bs-ride="carousel"&gt;
     &lt;div class="carousel-inner"&gt;
         &lt;div class="carousel-item active"&gt;
-            &lt;img src="SwipeFlow.png" class="d-block w-100" alt="Slide 1"&gt;
+            &lt;img src="img.jpg" class="d-block w-100" alt="Slide 1"&gt;
         &lt;/div&gt;
         &lt;div class="carousel-item"&gt;
-            &lt;img src="SwipeFlow.png" class="d-block w-100" alt="Slide 2"&gt;
+            &lt;img src="img.jpg" class="d-block w-100" alt="Slide 2"&gt;
         &lt;/div&gt;
         &lt;div class="carousel-item"&gt;
-            &lt;img src="SwipeFlow.png" class="d-block w-100" alt="Slide 3"&gt;
+            &lt;img src="img.jpg" class="d-block w-100" alt="Slide 3"&gt;
         &lt;/div&gt;
     &lt;/div&gt;
     &lt;button class="carousel-control-prev" type="button" data-bs-target="#demoCarousel" data-bs-slide="prev"&gt;
